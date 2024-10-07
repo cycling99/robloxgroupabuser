@@ -181,7 +181,8 @@ with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
     for future in as_completed(futures):
         if error_counter[0] >= 6:
             print("Process stopped due to too many errors.")
-            break
+            time.sleep(3)
+            exit()
         try:
             future.result()
         except Exception as e:
