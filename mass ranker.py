@@ -53,7 +53,8 @@ def get_csrf_token():
     if response.status_code == 403:
         return response.headers['x-csrf-token']
     raise Exception("Can't get CSRF token")
-    exit(3)
+    time.sleep(3)
+    exit()
 
 def get_bot_user_id():
     response = requests.get('https://users.roblox.com/v1/users/authenticated', headers=HEADERS)
@@ -152,13 +153,15 @@ try:
     TARGET_ROLE_ID = get_role_id_by_name(New_Rank)
 except ValueError as e:
     print(e)
-    exit(3)
+    time.sleep(3)
+    exit()
 
 bot_user_id = get_bot_user_id()
 bot_rank = get_user_rank_in_group(bot_user_id)
 if bot_rank is None:
     print("Bot is not a member of the group.")
-    exit(3)
+    time.sleep(3)
+    exit()
 
 print(f"Bot's rank in the group is {bot_rank}")
 print(f"Loading all group members, this may take a while...")
