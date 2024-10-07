@@ -15,6 +15,7 @@ Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/m
 - If you want to figure out how to get your .ROBLOSECURITY cookie, you need to install **EditThisCookie** browser extension.
 - If a bunch of errors appear in the console close it out **IMMEDIATELY**
 - Do not put MAX WORKERS too high or your device might crash.
+  - For big groups **(100k+)** use 25-40 max workers, for smaller groups use 5-15.
 
 Made by [Tripp](https://github.com/Tripp-omg)
 Made even better by [cycling99](https://github.com/cycling99)
