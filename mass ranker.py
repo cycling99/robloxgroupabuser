@@ -160,16 +160,15 @@ if bot_rank is None:
     exit(3)
 
 print(f"Bot's rank in the group is {bot_rank}")
-time.sleeop
-print(f"Loading all group members, this may take a while.")
+print(f"Loading all group members, this may take a while...")
 
 all_users = get_all_users()
 
 if all_users:
     print("Users loaded successfully.")
 ranked_users_count = 0
-error_counter = [0]  # Initialize a list to keep track of errors
-success_counter = [0]  # Initialize a list to keep track of successful promotions
+error_counter = [0] # trackers errors until it reaches 6 errors
+success_counter = [0]  # keeps track of successful promotions
 
 # process the users in parallel
 with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
