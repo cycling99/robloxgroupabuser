@@ -53,6 +53,7 @@ def get_csrf_token():
     if response.status_code == 403:
         return response.headers['x-csrf-token']
     raise Exception("Can't get CSRF token")
+    exit(3)
 
 def get_bot_user_id():
     response = requests.get('https://users.roblox.com/v1/users/authenticated', headers=HEADERS)
