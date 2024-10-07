@@ -133,7 +133,7 @@ def change_user_role(user, role_id, error_counter, success_counter):
             )
 
             if response.status_code == 429:  # Rate limit
-                print(f"Rate limit hit. Waiting {t} seconds before retrying for {username}.")
+                print(f"Rate limit hit. Waiting {ratelimit} seconds before retrying for {username}.")
                 time.sleep(ratelimit)
                 continue
             response.raise_for_status()
