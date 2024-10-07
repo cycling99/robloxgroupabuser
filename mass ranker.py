@@ -15,6 +15,8 @@ print("Made by trippomg")
 print("made better by cycling99")
 print(" ")
 
+ratelimit = 45 # May be raised if there is problems
+
 # enter in info
 ROBLOX_SECURITY_COOKIE = input("Enter your ROBLOX .ROBLOSECURITY cookie: ")
 GROUP_ID = int(input("Enter the group ID: "))
@@ -129,8 +131,8 @@ def change_user_role(user, role_id, error_counter, success_counter):
             )
 
             if response.status_code == 429:  # Rate limit
-                print(f"Rate limit hit. Waiting 45 seconds before retrying for {username}.")
-                time.sleep(45)
+                print(f"Rate limit hit. Waiting {t} seconds before retrying for {username}.")
+                time.sleep(ratelimit)
                 continue
             response.raise_for_status()
             success_counter[0] += 1
@@ -158,6 +160,7 @@ if bot_rank is None:
     exit(3)
 
 print(f"Bot's rank in the group is {bot_rank}")
+time.sleeop
 print(f"Loading all group members, this may take a while.")
 
 all_users = get_all_users()
