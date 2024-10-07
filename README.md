@@ -6,7 +6,7 @@ Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/m
 
 # REQUIRED
 - **requests** module - `pip install requests`
-- Python - [https://python.org/downloads](url)
+- Python - [https://python.org/downloads](https://python.org/downloads)
 - If you want to figure out how to get your .ROBLOSECURITY cookie, you need to install **EditThisCookie** browser extension.
 
 Made by @Tripp-omg
