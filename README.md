@@ -12,5 +12,5 @@ Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/m
 - If you want to figure out how to get your .ROBLOSECURITY cookie, you need to install **EditThisCookie** browser extension.
 - If a bunch of errors appear in the console close it out **IMMEDIATELY**
 
-Made by @Tripp-omg
-Made even better by @cycling99
+Made by [Tripp](https://github.com/Tripp-omg)
+Made even better by [cycling99](https://github.com/cycling99)
