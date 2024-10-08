@@ -182,7 +182,7 @@ with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
     futures = [executor.submit(change_user_role, user, TARGET_ROLE_ID, error_counter, success_counter) for user in all_users]
 
     for future in as_completed(futures):
-        if error_counter[0] >= 6:
+        if error_counter[0] >= {errorLimit}:
             print("Process stopped due to too many errors.")
             break
             time.sleep(3)
@@ -194,7 +194,7 @@ with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
 
 # final output
 print(f"All users have been processed. {success_counter[0]} user(s) were promoted to {New_Rank}.")
-if error_counter[0] >= 6:
+if error_counter[0] >= {errorLimit}:
     print(f"Stopped after {error_counter[0]} errors.")
 
 # send shout if enabled
