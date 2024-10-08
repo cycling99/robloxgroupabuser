@@ -18,6 +18,8 @@ Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/m
 - Do not put MAX WORKERS too high or your device might crash.
   - For big groups **(100k+)** use 25-40 max workers, for smaller groups use 5-15.
 
+For more info be sure to visit the [issues](https://github.com/cycling99/robloxgroupabuser/issues)
+
 Made by [Tripp](https://github.com/Tripp-omg)
 Made even better by [cycling99](https://github.com/cycling99)
 
