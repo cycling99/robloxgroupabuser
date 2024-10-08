@@ -5,7 +5,7 @@
 
 Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/mass%20ranker.py)
 
->[!NOTE]
+>[!hi]
 > This is in the early stages and might not work as intended 
 
 # REQUIRED
