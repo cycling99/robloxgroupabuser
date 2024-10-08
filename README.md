@@ -1,8 +1,6 @@
 # Roblox Mass Ranker/Group Abuser
 
-
-
-
+![image](https://github.com/user-attachments/assets/c1f0f613-e4b0-4efe-91b4-9cc9573bd759)
 
 
 Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/mass%20ranker.py)
