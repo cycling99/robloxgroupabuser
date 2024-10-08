@@ -5,6 +5,9 @@
 
 Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/mass%20ranker.py)
 
+>[!NOTE]
+> This is in the early stages and might not work as intended 
+
 # REQUIRED
 - **requests** module - `pip install requests`
 - Python - [https://python.org/downloads](https://python.org/downloads)
