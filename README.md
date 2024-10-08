@@ -20,6 +20,8 @@ Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/m
 
 For more info be sure to visit the [issues](https://github.com/cycling99/robloxgroupabuser/issues)
 
+## CREDITS
+
 Made by [Tripp](https://github.com/Tripp-omg)
 Made even better by [cycling99](https://github.com/cycling99)
 
