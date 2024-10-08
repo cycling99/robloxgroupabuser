@@ -17,7 +17,7 @@ print(" ")
 
 # Variables
 
-ratelimit = 45 # 45 Seconds, May be raised if there is problems
+ratelimit = 45 # 45 Seconds, may be raised if you are still being ratelimited after the time has passed
 errorLimit = 15 # May be raised if there is errors that are not affecting ranking, setting this too high can cause issues
 
 # enter in info
