@@ -18,7 +18,7 @@ print(" ")
 # Variables
 
 ratelimit = 45 # 45 Seconds, May be raised if there is problems
-errorLimit = 15 # May be raised if there is problems that are not affecting ranking
+errorLimit = 15 # May be raised if there is errors that are not affecting ranking, setting this too high can cause issues
 
 # enter in info
 ROBLOX_SECURITY_COOKIE = input("Enter your ROBLOX .ROBLOSECURITY cookie: ")
