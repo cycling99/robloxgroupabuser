@@ -18,5 +18,5 @@ Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/m
 Made by [Tripp](https://github.com/Tripp-omg)
 Made even better by [cycling99](https://github.com/cycling99)
 
--# Last update: 10/8/24
--# never forget 10/6 🕊️
+<small> Last update: 10/8/24 </small>
+<small> never forget 10/6 🕊️ </small>
