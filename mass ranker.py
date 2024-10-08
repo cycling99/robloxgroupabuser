@@ -15,7 +15,10 @@ print("Made by trippomg")
 print("made better by cycling99")
 print(" ")
 
-ratelimit = 45 # May be raised if there is problems
+# Variables
+
+ratelimit = 45 # 45 Seconds, May be raised if there is problems
+errorLimit = 15 # May be raised if there is problems that are not affecting ranking
 
 # enter in info
 ROBLOX_SECURITY_COOKIE = input("Enter your ROBLOX .ROBLOSECURITY cookie: ")
@@ -112,7 +115,7 @@ def change_user_role(user, role_id, error_counter, success_counter):
     username = user['user']['username']
     user_rank = user['role']['rank']
     
-    if error_counter[0] >= 6:
+    if error_counter[0] >= {errorLimit}:
         print("Max error limit reached. Stopping the process.")
         return False
 
