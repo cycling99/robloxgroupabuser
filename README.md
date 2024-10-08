@@ -17,6 +17,7 @@ Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/m
 - If a bunch of errors appear in the console close it out **IMMEDIATELY**
 - Do not put MAX WORKERS too high or your device might crash.
   - For big groups **(100k+)** use 25-40 max workers, for smaller groups use 5-15.
+If you would like, you can adjust the variable settings in the mass ranker.py **(rateLimit cooldown, errorLimit)**
 
 For more info be sure to visit the [issues](https://github.com/cycling99/robloxgroupabuser/issues)
 
