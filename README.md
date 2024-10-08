@@ -1,5 +1,5 @@
 # Roblox Mass Ranker/Group Abuser
-![image](https://github.com/user-attachments/assets/9d2e0507-3705-4d35-8d88-a6d8efd77ff9)
+
 
 
 
