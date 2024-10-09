@@ -6,6 +6,7 @@
 Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/mass%20ranker.py)
 
 This can rank ****2 thousand people**** before being ratelimited
+(30 seconds of ranking)
 
 >[!NOTE]
 > This is in the early stages and might not work as intended 
