@@ -3,6 +3,11 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import os
 
+# Variables
+
+ratelimit = 45 # 45 Seconds, may be raised if you are still being ratelimited after the time has passed.
+errorLimit = 15 # May be raised if there is errors that are not affecting ranking, setting this too high can cause issues
+
 print(" ")
 print("░██████╗░██████╗░░█████╗░██╗░░░██╗██████╗░  ░█████╗░██████╗░██╗░░░██╗░██████╗███████")
 print("██╔════╝░██╔══██╗██╔══██╗██║░░░██║██╔══██╗  ██╔══██╗██╔══██╗██║░░░██║██╔════╝██╔════╝")
@@ -15,10 +20,9 @@ print("Made by trippomg")
 print("made better by cycling99")
 print(" ")
 
-# Variables
-
-ratelimit = 45 # 45 Seconds, may be raised if you are still being ratelimited after the time has passed
-errorLimit = 15 # May be raised if there is errors that are not affecting ranking, setting this too high can cause issues
+print(f"Ratelimit cooldown is set to {ratelimit} seconds." )
+print(f"Maximum Error limit is to {errorLimit} errors.")
+print(" ")
 
 # enter in info
 ROBLOX_SECURITY_COOKIE = input("Enter your ROBLOX .ROBLOSECURITY cookie: ")
@@ -135,7 +139,7 @@ def change_user_role(user, role_id, error_counter, success_counter):
                 json={'roleId': role_id}
             )
 
-            if response.status_code == 429:  # Rate limit
+            if response.status_code == 429:  # Rate limit errorx
                 print(f"Rate limit hit. Waiting {ratelimit} seconds before retrying for {username}.")
                 time.sleep(ratelimit)
                 continue
