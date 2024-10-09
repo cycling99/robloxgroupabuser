@@ -5,6 +5,8 @@
 
 Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/mass%20ranker.py)
 
+**We urge you to read [our official statement](https://github.com/cycling99/robloxgroupabuser/blob/main/STATEMENT.md) before using our tool.**
+
 This can rank ****2 thousand people**** before being ratelimited
 (30 seconds of ranking)
 
