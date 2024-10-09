@@ -210,4 +210,9 @@ else:
 
 # made by trippomg
 # made better by cycling99
-# last update 10/8/24
+# last update 10/9/24
+
+# -----------------
+
+# never forget 10/6 🕊️
+# never forget 10/8 🕊️
