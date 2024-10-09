@@ -4,12 +4,13 @@
 
 
 Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/mass%20ranker.py)
+This can rank ****2 thousand people**** before being ratelimited
 
 >[!NOTE]
 > This is in the early stages and might not work as intended 
 
 # REQUIRED
-- **requests** module - `pip install requests`
+- **requests** package - `pip install requests`
 - Python - [https://python.org/downloads](https://python.org/downloads)
 
 # HELP
