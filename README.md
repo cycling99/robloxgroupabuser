@@ -14,7 +14,8 @@ This can rank ****2 thousand people**** before being ratelimited
 > This is in the early stages and might not work as intended 
 
 # REQUIRED
-- **requests** package - `pip install requests`
+- **requests** module - `pip install requests`
+- **colorama** module - `pip install colorama`
 - Python - [https://python.org/downloads](https://python.org/downloads)
 
 # HELP
