@@ -26,7 +26,7 @@ ERROR_LIMIT = 30 # errors before aborting
 
 cls()
 print(Fore.MAGENTA + Style.BRIGHT + BANNER)
-print(Fore.RED + " Public Edition\n")
+print(Fore.RED + " [Public Edition]\n")
 print(Fore.BLUE + f" - Rate limit cooldown: {RATE_LIMIT} seconds.")
 print(Fore.BLUE + f" - Error limit: {ERROR_LIMIT} errors.")
 print(Fore.BLUE + " - Recommended workers: 100 - 300.\n")
