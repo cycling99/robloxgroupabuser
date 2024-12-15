@@ -5,12 +5,33 @@ import time
 import os
 from queue import Queue
 
+# THIS IS MICROSOFT WINDOWS ONLY
+# THIS IS MICROSOFT WINDOWS ONLY
+# THIS IS mICROSOFT WINDOWS ONLY
 
+
+os.system('title syphoncore company - roblox group nuker [PUBLIC BUILD]')
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
 def pause():
     os.system('pause' if os.name == 'nt' else 'pause')
 
+statement = '''
+[2024] syphoncore company
+
+Syphoncore company software does NOT log cookies, or information of anykind.
+Syphoncore does NOT permit the resale of this software or any other redistribution other than the offical GitHub page.
+
+We are not responsible if anything happens to your Roblox account during, or after the use of our software.
+-----
+https://github.com/cycling99/robloxgroupabuser
+https://github.com/cycling99/robloxgroupabuser/blob/main/main.py
+
+'''
+
+print(Fore.WHITE + f"{statement}")
+time.sleep(5)
+cls
 
 BANNER = '''
  ░██████╗░██████╗░░█████╗░██╗░░░██╗██████╗░  ███╗░░██╗██╗░░░██╗██╗░░██╗███████╗
@@ -25,16 +46,17 @@ RATE_LIMIT = 45  # seconds
 ERROR_LIMIT = 30 # errors before aborting
 
 cls()
+os.system('title syphoncore company - roblox group nuker [PUBLIC BUILD] \\ Idling')
 print(Fore.MAGENTA + Style.BRIGHT + BANNER)
-print(Fore.RED + " [Public Edition]\n")
-print(Fore.BLUE + f" - Rate limit cooldown: {RATE_LIMIT} seconds.")
-print(Fore.BLUE + f" - Error limit: {ERROR_LIMIT} errors.")
-print(Fore.BLUE + " - Recommended workers: 100 - 300.\n")
+print(Fore.RED + " [ Public Build ]\n")
+print(Fore.BLUE + f"   [-] Rate limit cooldown: {RATE_LIMIT} seconds.")
+print(Fore.BLUE + f"   [-] Error limit: {ERROR_LIMIT} errors.")
+print(Fore.BLUE + "   [-] Recommended workers: 100 - 300.\n")
 
-ROBLOX_SECURITY_COOKIE = input(Fore.WHITE + " - Enter your ROBLOX .ROBLOSECURITY cookie: ")
-GROUP_ID = int(input(" - Enter the group ID: "))
-NEW_RANK = input(" - Enter the rank to rank users to: ")
-MAX_WORKERS = int(input(" - (Recommended: 100-300) Enter max workers: "))
+ROBLOX_SECURITY_COOKIE = input(Fore.WHITE + " [INPUT] Enter your ROBLOX .ROBLOSECURITY cookie >>> ")
+GROUP_ID = int(input("[INPUT]  Enter the group ID >>> "))
+NEW_RANK = input(" [INPUT] Enter the rank to rank users to >>> ")
+MAX_WORKERS = int(input(" [INPUT] (Recommended: 100-300) Enter max workers >>> "))
 
 cls()
 
@@ -49,7 +71,7 @@ def get_csrf_token():
     response = requests.post('https://auth.roblox.com/v2/logout', headers=HEADERS)
     if response.status_code == 403:
         return response.headers['x-csrf-token']
-    raise Exception(Fore.RED + "[!] Unable to fetch CSRF token.")
+    raise Exception(Fore.RED + "[ERROR] Unable to fetch CSRF token.")
 
 # get group roles
 def get_group_roles():
@@ -63,7 +85,7 @@ def get_role_id_by_name(role_name):
     for role in roles:
         if role['name'].lower() == role_name.lower():
             return role['id']
-    raise ValueError(Fore.RED + f"[!]: Role '{role_name}' not found.")
+    raise ValueError(Fore.RED + f"[ERROR]: Role '{role_name}' not found.")
 
 # get bot userid
 def get_bot_user_id():
@@ -114,16 +136,17 @@ def change_user_role(user, role_id, bot_rank, error_counter, success_counter):
             json={'roleId': role_id}
         )
         if response.status_code == 429:
+            os.system('title syphoncore company - roblox group nuker [PUBLIC BUILD] \\ Ratelimited!')
             print(Fore.YELLOW + f"[?] Rate limit hit. Waiting {RATE_LIMIT}s for {username}.")
             time.sleep(RATE_LIMIT)
             return False
         response.raise_for_status()
         success_counter.put(1)
-        print(Fore.GREEN + f"Ranked {username} to {NEW_RANK}. Total ranked: {success_counter.qsize()}")
+        print(Fore.GREEN + f"[SUCCESS] Ranked {username} to {NEW_RANK}. Total ranked: {success_counter.qsize()}")
         return True
     except requests.RequestException as e:
         error_counter.put(1)
-        print(Fore.RED + f"[!] Error ranking {username}: {e}")
+        print(Fore.RED + f"[ERROR] Error ranking {username}: {e}")
         return False
 
 
@@ -134,13 +157,13 @@ bot_user_id = get_bot_user_id()
 bot_rank = get_user_rank_in_group(bot_user_id)
 
 if bot_rank is None:
-    print(Fore.RED + "[!]: Bot is not a member of the group.")
+    print(Fore.RED + "[ERROR]: Bot is not a member of the group.")
     pause()
     exit()
 
 print(Fore.WHITE + f"Bot's rank in the group: {bot_rank}")
 all_users = get_all_users()
-print(Fore.WHITE + f"Loaded {len(all_users)} users.\n")
+print(Fore.GREEN + f"[SUCCESS] Loaded {len(all_users)} users.\n")
 
 error_counter = Queue()
 success_counter = Queue()
@@ -152,14 +175,15 @@ with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
 
     for future in as_completed(futures):
         if error_counter.qsize() >= ERROR_LIMIT:
-            print(Fore.RED + "[!] Process stopped due to too many errors.")
+            print(Fore.RED + "[ERROR] Process stopped due to too many errors.")
             break
         try:
             future.result()
         except Exception as e:
-            print(Fore.RED + f"[!] Unexpected error: {e}")
+            print(Fore.RED + f"[ERROR] Unexpected error: {e}")
 
 elapsed_time = time.time() - start_time
+os.system('title syphoncore company - roblox group nuker [PUBLIC BUILD] \\ Finished Ranking!')
 print(Fore.WHITE + f"\nFinished! Ranked {success_counter.qsize()} users in {elapsed_time:.2f} seconds.")
 pause()
 
