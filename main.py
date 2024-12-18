@@ -1,20 +1,46 @@
-import requests
-from colorama import Fore, Style
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import time
 import os
 from queue import Queue
-
-# THIS IS MICROSOFT WINDOWS ONLY
-# THIS IS MICROSOFT WINDOWS ONLY
-# THIS IS mICROSOFT WINDOWS ONLY
-
 
 os.system('title syphoncore company - roblox group nuker [PUBLIC BUILD]')
 def cls():
     os.system('cls' if os.name == 'nt' else 'clear')
 def pause():
     os.system('pause' if os.name == 'nt' else 'pause')
+
+try:
+    import requests
+except ImportError:
+    print("'requests' module was not found, installing requests...")
+    os.system("pip install requests")
+    print(" ")
+    print(f"Installed 'requests' module, restart this software for changes to take affect.")
+    pause()
+    exit()
+try:
+    from colorama import Fore, Style, init
+except ImportError:
+    print("'colorama' module was not found, installing colorama...")
+    os.system("pip install colorama")
+    print(" ")
+    print("Installed 'colorama' module, restart this software for changes to take affect.")
+    pause()
+    exit()
+
+# THIS IS MICROSOFT WINDOWS ONLY
+# THIS IS MICROSOFT WINDOWS ONLY
+# THIS IS MICROSOFT WINDOWS ONLY
+
+BANNER = '''                                                                                                               
+  .g8"""bgd `7MM"""Mq.   .g8""8q. `7MMF'   `7MF'`7MM"""Mq.  
+.dP'     `M   MM   `MM..dP'    `YM. MM       M    MM   `MM.         
+dM'       `   MM   ,M9 dM'      `MM MM       M    MM   ,M9            
+MM            MMmmdM9  MM        MM MM       M    MMmmdM9            
+MM.    `7MMF' MM  YM.  MM.      ,MP MM       M    MM              
+`Mb.     MM   MM   `Mb.`Mb.    ,dP' YM.     ,M    MM             
+  `"bmmmdPY .JMML. .JMM. `"bmmd"'    `bmmmmd"'  .JMML.
+'''
 
 statement = '''
 [2024] syphoncore company
@@ -33,14 +59,7 @@ print(Fore.WHITE + f"{statement}")
 time.sleep(5)
 cls
 
-BANNER = '''
- ░██████╗░██████╗░░█████╗░██╗░░░██╗██████╗░  ███╗░░██╗██╗░░░██╗██╗░░██╗███████╗
- ██╔════╝░██╔══██╗██╔══██╗██║░░░██║██╔══██╗  ████╗░██║██║░░░██║██║░██╔╝██╔════╝
- ██║░░██╗░██████╔╝██║░░██║██║░░░██║██████╔╝  ██╔██╗██║██║░░░██║█████═╝░█████╗░░
- ██║░░╚██╗██╔══██╗██║░░██║██║░░░██║██╔═══╝░  ██║╚████║██║░░░██║██╔═██╗░██╔══╝░░
- ╚██████╔╝██║░░██║╚█████╔╝╚██████╔╝██║░░░░░  ██║░╚███║╚██████╔╝██║░╚██╗███████╗
- ░╚═════╝░╚═╝░░╚═╝░╚════╝░░╚═════╝░╚═╝░░░░░  ╚═╝░░╚══╝░╚═════╝░╚═╝░░╚═╝╚══════╝
-'''
+
 
 RATE_LIMIT = 45  # seconds
 ERROR_LIMIT = 30 # errors before aborting
