@@ -1,8 +1,5 @@
 # Roblox Mass Ranker/Group Abuser
 
-![image](https://github.com/user-attachments/assets/c1f0f613-e4b0-4efe-91b4-9cc9573bd759)
-
-
 Download Link: [Here](https://github.com/cycling99/robloxgroupabuser/blob/main/mass%20ranker.py)
 
 **We urge you to read [our official statement](https://github.com/cycling99/robloxgroupabuser/blob/main/STATEMENT.md) before using our tool.**
@@ -14,6 +11,7 @@ This can rank ****2 thousand people**** before being ratelimited
 > This is in the early stages and might not work as intended 
 
 # REQUIRED
+the modules will auto install if you dont have them
 - **requests** module - `pip install requests`
 - **colorama** module - `pip install colorama`
 - Python - [https://python.org/downloads](https://python.org/downloads)
