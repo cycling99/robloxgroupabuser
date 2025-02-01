@@ -8,3 +8,4 @@
 
 requests python module
   - pip install requests
+  - pip install colorama
